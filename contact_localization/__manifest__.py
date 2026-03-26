@@ -14,6 +14,7 @@
             'contact_localization/static/src/xml/map_widget.xml',
         ],
     },
+    "images": ["static/description/banner.png"],
     'installable': True,
     'license': 'LGPL-3',
 }
