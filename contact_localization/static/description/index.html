@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Localization - Odoo 19</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --odoo-purple: #714B67;
+  --odoo-teal: #017e84;
+  --bg-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --glass: rgba(255, 255, 255, 0.95);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1e293b;
+}
+
+/* HERO SECTION */
+.hero {
+  background: var(--bg-gradient);
+  padding: 100px 20px;
+  border-radius: 0 0 50px 50px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -10%; right: -10%;
+  width: 300px; height: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.hero-img {
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  transition: transform 0.5s ease;
+  border: 4px solid rgba(255,255,255,0.1);
+}
+
+.hero-img:hover {
+  transform: scale(1.02);
+}
+
+/* SECTION HEADINGS */
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; left: 0;
+  width: 60px; height: 5px;
+  background: var(--odoo-purple);
+  border-radius: 10px;
+}
+
+/* FEATURE BOXES */
+.feature-item {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  display: flex;
+  align-items: center;
+  border-left: 5px solid var(--odoo-teal);
+  transition: 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* SCREENSHOT CARDS */
+.s-card {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.s-card img {
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* SERVICE TILES */
+.service-box {
+  padding: 30px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-box:hover {
+  border-color: var(--odoo-teal);
+  box-shadow: 0 20px 40px rgba(1, 126, 132, 0.1);
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* SUPPORT SECTION */
+.support-card {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, var(--odoo-purple), var(--odoo-teal)) border-box;
+  border: 3px solid transparent;
+  border-radius: 24px;
+  padding: 50px;
+}
+
+.badge-custom {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero text-center">
+  <div class="container">
+    <div class="mb-4">
+      <span class="badge-custom me-2">✔ Odoo Community</span>
+      <span class="badge-custom">✔ Odoo Enterprise</span>
+    </div>
+
+    <h1 class="display-3 fw-black mb-3">Contact Localization<br><span style="color: #4facfe;">Map Widget</span></h1>
+    <p class="lead opacity-75 mx-auto" style="max-width: 700px;">
+      Empower your Odoo workflow with an interactive OpenStreetMap preview.
+      No API keys, no monthly fees—just seamless geolocation.
+    </p>
+
+    <div class="mt-5">
+      <img src="assets/screenshots/banner.webp" class="img-fluid hero-img" alt="Banner" style="max-width: 1000px;">
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="text-center">
+    <h2 class="section-title">Overview</h2>
+    <p class="lead text-muted mx-auto" style="max-width: 800px;">
+      Stop jumping between tabs to verify addresses. Our OWL-based widget brings a high-performance map
+      directly into your Contact form view.
+    </p>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-4">
+        <div class="feature-item">📍 Real-time Marker Preview</div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-item">⚡ High Performance OWL</div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-item">🔑 Zero API Configuration</div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-item">🌍 OpenStreetMap Integration</div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-item">🔄 Auto-sync Coordinates</div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-item">🎨 Clean UI/UX Design</div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Experience the Flow</h2>
+
+  <div class="s-card">
+    <div class="row align-items-center">
+      <div class="col-md-5 pe-md-5">
+        <h3 class="fw-bold">Intelligent Coordinates</h3>
+        <p class="text-muted">Enter any address and watch the module automatically calculate the latitude and longitude for pinpoint accuracy.</p>
+      </div>
+      <div class="col-md-7">
+        <img src="assets/screenshots/compute.png" class="img-fluid" alt="Compute">
+      </div>
+    </div>
+  </div>
+
+  <div class="s-card">
+    <div class="row align-items-center flex-md-row-reverse">
+      <div class="col-md-5 ps-md-5">
+        <h3 class="fw-bold">Interactive Widget</h3>
+        <p class="text-muted">A beautiful, responsive map appears instantly. Zoom, pan, and verify the location without ever leaving the Odoo interface.</p>
+      </div>
+      <div class="col-md-7">
+        <img src="assets/screenshots/map2.png" class="img-fluid" alt="Map Preview">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Our Expertise</h2>
+  <div class="row g-4 mt-2">
+    <div class="col-md-4">
+      <div class="service-box text-center">
+        <span class="service-icon">⚙️</span>
+        <h5 class="fw-bold">Customization</h5>
+        <p class="small text-muted">Tailoring Odoo to fit your unique business logic.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-box text-center">
+        <span class="service-icon">🚀</span>
+        <h5 class="fw-bold">Implementation</h5>
+        <p class="small text-muted">End-to-end setup for startups and enterprises.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="service-box text-center">
+        <span class="service-icon">🛠</span>
+        <h5 class="fw-bold">Support</h5>
+        <p class="small text-muted">Reliable 24/7 support and maintenance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="support-card text-center mt-5">
+    <h2 class="fw-black mb-3">30 Days Free Support</h2>
+    <p class="lead text-muted mb-4">We stand by our code. Need help with installation or have a question?</p>
+    <a href="mailto:asappssupport@gmail.com" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow">
+        Contact: <b>asappssupport@gmail.com</b>
+    </a>
+  </div>
+</div>
+
+<footer class="text-center py-4 text-muted border-top">
+  <small>&copy; 2026 AS Apps. All rights reserved.</small>
+</footer>
+
+</body>
+</html>

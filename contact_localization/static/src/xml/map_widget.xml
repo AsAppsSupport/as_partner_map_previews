@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="contact_localization.MapPreviewWidget">
+        <div class="o_field_map_preview map-widget-container">
+            <t t-if="hasCoords">
+                <div class="map-widget-header">
+                    <h4 class="map-widget-title">
+                        <i class="fa fa-map-marker me-2" style="color: #1f77d2;"/>
+                        <t t-esc="partnerName"/>
+                    </h4>
+                    <t t-if="partnerAddress">
+                        <p class="map-widget-address">
+                            <i class="fa fa-map-pin me-1"/>
+                            <t t-esc="partnerAddress"/>
+                        </p>
+                    </t>
+                </div>
+                <div t-ref="mapContainer"
+                     class="map-widget-container-inner"
+                     style="height: 400px; width: 100%; border-radius: 8px; border: 1px solid #dee2e6; margin-top: 12px; position: relative; overflow: hidden;"/>
+                <div class="map-widget-footer">
+                    <small class="text-muted">
+                        <strong>Coordinates:</strong> <t t-esc="latitude.toFixed(6)"/>, <t t-esc="longitude.toFixed(6)"/>
+                    </small>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="map-widget-empty">
+                    <i class="fa fa-map-marker me-2"/>
+                    <span>Fill in latitude and longitude to preview the location on map.</span>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>
