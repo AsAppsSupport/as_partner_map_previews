@@ -1,5 +1,5 @@
 {
-    'name': 'Partner Map Preview',
+    'name': 'Partner/Customer/Vendor Map Preview',
     'version': '19.0.1.1.0',
     'summary': 'Enhanced map preview on partner form with multiple map types, full features',
     'depends': ['base', 'base_geolocalize'],
@@ -14,7 +14,7 @@
             'contact_localization/static/src/xml/map_widget.xml',
         ],
     },
-    "images": ["static/description/banner.png"],
+    "images": ["static/description/banner.jpg"],
     'installable': True,
     'license': 'LGPL-3',
 }
